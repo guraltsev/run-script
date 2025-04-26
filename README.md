@@ -2,7 +2,7 @@
 **RunScript**
 ================
 
-# Overview**
+# Overview
 ------------
 
 This project is a script execution wrapper that provides a flexible way to run scripts with various options. The script supports different script types, including PowerShell (PS1) and Python (PY).

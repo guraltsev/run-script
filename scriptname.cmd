@@ -48,7 +48,15 @@ set "scriptDir=%~dp0%scriptSubdir%"
 
 
 if "%scriptName%"=="" (
-	set "scriptName=%~n0.ps1"
+	if "%scriptType%"=="PS1" (
+		set "scriptName=%~n0.ps1"
+	) else if "%scriptType%"=="PY" (
+		set "scriptName=%~n0.py"
+	) else if "%scriptType%"=="BAT" (
+		set "scriptName=%~n0.bat"
+	) else (
+		set "scriptName=%~n0"
+	)
 ) 
 set "scriptFullName=%scriptDir%%scriptName%"
 
